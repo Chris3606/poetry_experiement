@@ -1,0 +1,33 @@
+[project]
+name = "poetry-scratch2"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = "^3.12"
+dependencies = [
+    "textual (>=1.0.0,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "poetry_scratch2", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+textual-dev = "^1.7.0"
+black = "^25.1.0"
+pylint = "^3.3.4"
+isort = "^6.0.0"
+mypy = "^1.15.0"
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^8.3.4"
+
+
+[tool.poetry.group.nox.dependencies]
+nox-poetry = "^1.1.0"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
